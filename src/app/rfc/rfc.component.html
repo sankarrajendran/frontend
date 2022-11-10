@@ -1,0 +1,19 @@
+<p>rfc works!</p>
+
+Employee Name : 
+<input type="text" [formControl] = "employee"/><br>
+<label class="label">
+    Value : <H3>{{employee.value}}</H3>
+</label>
+<br>
+<H3>Angular Form Group:</H3>
+<form [formGroup]="employeeForm">
+    Employee Name : <input type="text" formControlName = "employeeName"/><br>
+    Designation : <input type="text" formControlName = "designation"/><br>
+    <!--<form [formGroup]="address">
+        City : <input type="text" formControlName = "city"/><br>
+        Country : <input type="text" formControlName = "country"/><br>
+    </form>-->
+</form>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()"></form>
+<button type="submit" class="btn btn-primary"(click) ="onSubmit()">Submit</button>
