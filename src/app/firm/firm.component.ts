@@ -12,4 +12,8 @@ export class FirmComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit(login: any){
+    console.log("Form submitted.", login);
+  }
+
 }
